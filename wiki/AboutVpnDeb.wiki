@@ -1,0 +1,37 @@
+#labels Featured
+校内VPN安装包for Ubuntu
+
+作者：slackware 
+
+
+使用说明：
+
+
+为方便ubuntu下使用校内vpn，特制作此deb包，省去了手动配置的步骤，简单易用。
+l2tpd的源码为0.69版本，加了Sysv的Patch,提高连接速度。
+安装方法: $sudo dpkg -i l2tpd-zju-aliceoh.deb
+安装过程会提示输入帐号和密码。
+卸载方法: $sudo dpkg --purge l2tpd
+若已安装别的版本的l2tpd请先卸载之，并清空/etc/ppp/chap-secrets文件里的内容
+使用方法
+开启：
+sudo vpn start
+关闭：
+sudo vpn stop
+下此压缩包解压后即可安装
+
+这是目录结构
+./
+etc/
+etc/l2tpd/
+etc/l2tpd/l2tpd.conf
+etc/l2tpd/zju.options
+etc/init.d/
+etc/init.d/l2tpd
+usr/
+usr/sbin/
+usr/sbin/l2tpd
+usr/bin/
+usr/bin/vpn
+
+还有安装时后执行的脚本postinst  卸载前，后执行的脚本 prerm ,postrm
