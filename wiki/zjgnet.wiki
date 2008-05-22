@@ -1,0 +1,23 @@
+#labels Featured
+pub 上网脚本
+上网脚本 ALL-IN-ONE
+
+类型：
+ONE Bash Script
+
+建议加在/etc/inittab实现自启动，而非daemon形式。
+
+功能：
+1. 紫金港201卡连内网（不依赖python, perl等等，依赖telnet）
+2. VPN联网（依赖xl2tpd 1.1.12）
+3. 希网动态域名更新（内外网IP都可以处理，注意：目前只有10米VPN才有外网IP :p）（依赖w3m）
+
+
+
+
+
+
+使用说明：
+1. 按照注释修改脚本内USERNAME, PASSWORD（如果没有或者不需要相应功能，USERNAME留空即可）
+2. 没有运行其他网络脚本的情况下直接运行本脚本（不需要sudo）即可执行相应功能。
+3. 网络被整乱的时候使用r参数执行本脚本即可收拾残局，重启网络
